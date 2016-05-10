@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en-us" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chris Vere- Ally Code Challenge</title>
+	<!--[if lte IE 9]>
+		<script src="js/polyfill-classlist.js"></script>
+		<script src="js/polyfill-dataset.js"></script>
+	<![endif]-->
+	<script>
+		(function(){
+			var html = document.querySelector('html');
+			html.classList.remove('no-js');
+			html.classList.add('js');
+		})();
+	</script>
+	<link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+	<div class="outer-wrap">
+		<div class="inner-wrap">
+			<header class="pg-header">
+				<div class="wrap">
+					<a href="/" class="home-link">
+						<img src="images/logo.svg" alt="URBank Logo" class="logo-header">
+					</a>
+
+					<button class="mobile-nav-toggle">Menu</button>
+					
+					<nav class="header-nav">
+						<ul class="header-nav__list">
+							<li class="header-nav__item"><a class="header-nav__link" href="/">home</a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#">employee</a></li>
+							<li class="header-nav__item header-nav__item--is-active">
+								<a class="header-nav__link" href="#">company</a>
+								<ul class="header-nav__list header-nav__list--sub">
+									<li class="header-nav__item header-nav__item--sub"><a class="header-nav__link header-nav__link--sub" href="#">a sub-nav for fun</a></li>
+									<li class="header-nav__item header-nav__item--sub"><a class="header-nav__link header-nav__link--sub" href="#">another link</a></li>
+								</ul>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__link" href="#">services</a>
+								<ul class="header-nav__list header-nav__list--sub">
+									<li class="header-nav__item header-nav__item--sub"><a class="header-nav__link header-nav__link--sub" href="#">general banking</a></li>
+									<li class="header-nav__item header-nav__item--sub"><a class="header-nav__link header-nav__link--sub" href="#">personal loans</a></li>
+									<li class="header-nav__item header-nav__item--sub"><a class="header-nav__link header-nav__link--sub" href="#">business loans</a></li>
+								</ul>
+							</li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#" >contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<div class="pg-body">
+				<div class="wrap">
+					<main class="pg-main">
+						<h1>Best Bank Ever!</h1>
+						<p>Pellentesque habitant morbi tristique senectus et netus et <a href="#">malesuada</a> fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris <a href="#">placerat</a> eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
+						<p>
+							<span class="heading-p">Reasons We're Awesome</span>
+							<ul>
+								<li>Lorem ipsum dolor sit amet.</li>
+								<li>Aliquam tincidunt mauris eu risus.</li>
+								<li>Lorem ipsum dolor sit amet.</li>
+								<li>Lorem ipsum dolor sit amet.</li>
+								<li>Vestibulum auctor dapibus neque.</li>
+							</ul>
+						</p>
+						<div class="callout">
+							<p class="callout__heading">Amazing Mobile Info</p>
+							<img src="images/phone.svg" alt="Smart phone illustration" class="callout__img">
+							<div class="callout__content">
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+							</div>
+						</div>
+						
+						<table class="table--feature table--responsive" cellpadding="0" cellspacing="0" border="0">
+							<caption>Rates <span class="divider-bar">Check them out.</span></caption>
+							<thead>
+								<tr>
+									<td colspan="2">Annual Percentage Yield</td>
+									<td>Est. Earnings for 1 Year<sup>*</sup></td>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<td colspan="3"><sup>*</sup>Based on $50,000 deposit.</td>
+								</tr>
+							</tfoot>
+						</table>
+
+					</main>
+					<aside class="pg-side">
+						<!--
+							Link to the Login page for those with no JS.
+							Progressively enhance with a modal.
+						-->
+						<a href="#" class="button button--cta full-width" data-modal-launch data-modal-target="login-overlay-module">Login</a>
+
+						<div class="tabs">
+							<ul class="tabs__list" role="tablist">
+								<li class="tabs__item tabs__item--is-active"><a tabindex="0" aria-selected="true"  class="tabs__link" role="tab" id="tabControlNews"    aria-controls="tabNews"    href="#tabNews"   >News</a></li>
+								<li class="tabs__item"                      ><a tabindex="0" aria-selected="false" class="tabs__link" role="tab" id="tabControlArchive" aria-controls="tabArchive" href="#tabArchive">Archive</a></li>
+							</ul>
+							<div class="sidebar-panel tabs__panel-wrap">
+								<div aria-labelledby="tabControlNews"    id="tabNews"    aria-hidden="false" role="tabpanel" class="tabs__panel tabs__panel--is-active">
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+											<p class="sidebar-item__content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+										</a>
+									</article>
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+											<p class="sidebar-item__content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+										</a>
+									</article>
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+											<p class="sidebar-item__content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+										</a>
+									</article>
+								</div>
+								<div aria-labelledby="tabControlArchive" id="tabArchive" aria-hidden="true"  role="tabpanel" class="tabs__panel">
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+										</a>
+									</article>
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+										</a>
+									</article>
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+										</a>
+									</article>
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+										</a>
+									</article>
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+										</a>
+									</article>
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+										</a>
+									</article>
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+										</a>
+									</article>
+									<article class="sidebar-item">
+										<a href="articleLink" class="a-no-style"></a>
+											<h1 class="sidebar-item__heading">Lorem ipsum dolor</h1>
+										</a>
+									</article>
+								</div>
+							</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+			<footer class="pg-footer">
+				<div class="wrap">
+					<nav class="footer-nav">
+						<ul class="footer-nav__list">
+							<li class="footer-nav__item"><a href="#" class="footer-nav__link">home</a></li>
+							<li class="footer-nav__item"><a href="#" class="footer-nav__link">employee</a></li>
+							<li class="footer-nav__item footer-nav__item--is-active"><a href="#" class="footer-nav__link">company</a></li>
+							<li class="footer-nav__item"><a href="#" class="footer-nav__link">services</a></li>
+							<li class="footer-nav__item"><a href="#" class="footer-nav__link">contact</a></li>
+						</ul>
+					</nav>
+					<p class="copyright">&copy; 2016 URBank</p>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<div class="overlay">
+		<div id="login-overlay-module" class="overlay-module" role="dialog" aria-labeledby="login-modal-title">
+			<h1 class="overlay-module__heading" id="login-modal-title">Sign In To Your Account</h1>
+			<form action="#" class="overlay-module-form">
+				<div class="form-pair">
+					<label for="username">Username</label>
+					<input type="text" name="username" id="username" required>
+				</div>
+				<div class="form-pair">
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" required>
+				</div>
+				<button class="button--submit" type="submit">Login</button>
+			</form>
+			<button class="button--close-overlay-module" tabindex="0" data-modal-close>
+				<img src="images/button-close.svg" alt="close dialog">
+			</button>
+		</div>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
