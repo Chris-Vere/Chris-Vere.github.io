@@ -1,10 +1,17 @@
-function log(msg){
-	console.log( msg );
-}
+// @codekit-append "globals.js";
+// @codekit-append "mobile-nav.js";
+// @codekit-append "tabs.js";
+// @codekit-append "login-modal.js";
+// @codekit-append "data-table.js";
 
-function newElem(name){
-	return document.createElement(name);
-}
+var cv = {
+	log: function(message){
+		console.log(message);
+	},
+	newElem:function(elementName){
+		return document.createElement(elementName);
+	}
+};
 
 // mobile nav toggle
 (function(){
@@ -13,7 +20,8 @@ function newElem(name){
 		navIsShowing = false,
 		classnameShowNav = 'showNav';
 
-	function toggleMobileNav(){
+	function toggleMobileNav(e){
+
 		if( navIsShowing ){
 			html.classList.remove( classnameShowNav );
 		}else{
@@ -24,7 +32,6 @@ function newElem(name){
 	}
 
 	menuBtn.addEventListener('click', toggleMobileNav);
-
 })();
 
 // tabs
@@ -166,16 +173,16 @@ function newElem(name){
 // data table
 (function(){
 	var table = document.querySelector( '.table--feature' );
-	var tbody = newElem('tbody');
+	var tbody = cv.newElem('tbody');
 	var respAttrs = [ "", "Annual Percentage Yield", "Est. Earnings for 1 Year*" ];
 
 	function buildTable(data){
 		for(var i = 0; i < data.length; i++){
-			var row = newElem('tr');
+			var row = cv.newElem('tr');
 
 			var index = 0;
 			for( val in data[i] ){
-				var td = newElem('td');
+				var td = cv.newElem('td');
 				td.dataset.respText = respAttrs[index];
 				td.textContent = data[i][val];
 				row.appendChild( td );
@@ -187,8 +194,8 @@ function newElem(name){
 	}
 
 	function buildError(){
-		var row = newElem('tr');
-		var cell = newElem('td');
+		var row = cv.newElem('tr');
+		var cell = cv.newElem('td');
 		cell.classList.add('center')
 		cell.setAttribute('colspan', '3');
 		cell.textContent = 'Sorry, there was an error loading the content.';
@@ -212,15 +219,4 @@ function newElem(name){
 		}
 	}
 })();
-
-
-
-
-
-
-
-
-
-
-
 
