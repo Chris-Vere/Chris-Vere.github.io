@@ -1,0 +1,67 @@
+.overlay{
+	position: absolute;
+	z-index: 1;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	padding: 1rem;
+	text-align: center;
+
+	background-color: rgba(black, 0.75);
+
+	opacity: 0;
+	will-change: opacity;
+	transition: opacity 0.2s ease-out;
+
+	&--is-block{
+		display: block;
+	}
+
+	&--is-active{
+		opacity: 1;
+	}
+
+}
+
+.overlay-module{
+	display: inline-block;
+	text-align: left;
+	position: relative;
+	width: 100%;
+	max-width: rem(450);
+
+	padding: rem(30) rem(15) rem(15);
+	box-shadow: 0 0 10px rgba(black, 1);
+	background-color: #fff;
+
+	transform:
+		translateY(0.5em)
+		scale(0.98, 0.98);
+	
+	transform-origin: center bottom;
+	will-change: transform;
+
+	transition: transform 0.2s ease-out;
+
+	.overlay--is-active &{
+		transform:
+			translateY(0)
+			scale(1,1);
+	}
+
+	&__heading{
+		font-size: rem(28);
+		color: $color-default;
+	}
+}
+
+.button--close-overlay-module{
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	padding: 0;
+	background-color: transparent;
+}

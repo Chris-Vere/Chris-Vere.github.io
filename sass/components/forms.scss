@@ -1,0 +1,36 @@
+form{
+	position: relative;
+	margin-bottom: 1em;
+	@extend %clearfix;
+
+	
+	input[type="submit"],
+	button[type="submit"]{ float: right; }
+}
+
+input{
+	border: 1px solid $color-blue;
+	box-shadow: none;
+	border-radius: 0;
+	background: #FFF;
+
+	&:focus,
+	&:active{
+		outline: none;
+		box-shadow: 0 0 5px $color-blue;
+	}
+}
+
+.form-pair{
+	margin-bottom: 1em;
+	@extend %clearfix;
+
+	display: flex;
+
+	label{ flex-basis: 30%; }
+
+	label + input{
+		flex: 1 0 auto;
+	}
+
+}

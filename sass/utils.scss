@@ -1,0 +1,36 @@
+$base-font-size: 14;
+
+@function rem($target){
+	@return #{($target / $base-font-size)*1}rem;
+}
+
+@function em($target, $base:14){
+	@return #{$target / $base}em;
+}
+
+$mobileNavOffset: 60%;
+$sitePadding: rem(14);
+$bp-nav: rem(768);
+
+$mobileNavShadowSize: 4px;
+$mobileNavShadow: $mobileNavShadowSize 0 $mobileNavShadowSize rgba(0, 0, 0, 0.2) inset;
+
+%clearfix{
+	&::after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@for $i from 1 through 10 {
+	$ten  : $i*10;
+	$five : $ten + 5;
+	.w-#{$ten}  { width: #{$ten}%; }
+	.w-#{$five} { width: #{$five}%; }
+
+	// output sample: 
+	// .w-10{ width: 10%; }
+	// .w-15{ width: 15%; }
+	// ...
+}

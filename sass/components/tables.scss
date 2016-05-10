@@ -1,0 +1,89 @@
+table{
+	width: 100%;
+	margin: 0 0 1em;
+}
+
+thead,
+tfoot,
+th,
+td + td{ text-align: right; }
+
+caption{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+thead,
+tfoot{ font-size: em(12, 16); }
+
+tr{ background-color: $color-green-light; }
+tr:nth-child(odd){ background-color: $color-green-lighter; }
+
+thead tr,
+tfoot tr{ background-color: transparent !important; }
+
+td{ padding: 0.5em; }
+
+.strong{ font-weight: bold; }
+
+.full-width{ width: 100%; }
+.heading-p{ font-weight: bold; }
+
+.table{
+	&--feature{
+		font-size: rem(16);
+
+		tbody tr:first-child{ font-weight: bold; }
+
+		caption{
+			font-size: em(27, 16);
+			font-weight: 200;
+		}
+	}
+}
+
+@media screen and (max-width: rem(767)){
+	tr.strong{ font-size: 1em; }
+
+	.table--responsive{
+		thead{ display: none; }
+
+		td{
+			position: relative;
+			display: block;
+			padding-left: 75%;
+			text-align: left;
+
+			&:before{
+				position: absolute;
+				top: 50%;
+				left: 1em;
+				transform: translateY(-50%);
+				content: attr(data-resp-text);
+				display: inline;
+			}
+		}
+	}
+
+	.table--feature{
+		tbody tr:first-child{
+			font-weight: bold;
+			&:after{
+				content: '';
+				display: block;
+				margin-bottom: 1.5em;
+			}
+		}
+		tbody td:first-child{
+			font-weight: bold;
+			text-align: center;
+			padding-left: 0;
+		}
+
+		tfoot td{
+			padding-left: 0;
+			text-align: right;
+		}
+	}
+
+}

@@ -1,0 +1,20 @@
+.sidebar-panel{
+
+	padding: rem(26) rem(16) rem(2);
+	border-top: 1px solid $color-gray-darker;
+	background-color: $color-gray;
+}
+
+.sidebar-item{
+	
+	&:not(:last-child){
+		margin-bottom: em(24);
+	}
+
+	&__heading{
+		margin-bottom: 0.5em;
+		font-size: rem(16);
+		font-weight: bold;
+		color: $color-blue;
+	}
+}

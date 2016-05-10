@@ -1,0 +1,35 @@
+.pg-footer{
+	text-align: center;
+	padding: 1rem 0 rem(30);
+	font-size: rem(16);
+	background-color: $color-gray-light;
+}
+
+.footer-nav{
+	&__list{
+		padding: 0;
+		list-style-type: none;
+		@extend %clearfix;
+	}
+
+	&__link{
+		display: block;
+		padding: 0 em(12, 16);
+		text-decoration: none;
+
+		.footer-nav__item--is-active &{
+			font-weight: bold;
+			pointer-events: none;
+		}
+	}
+}
+
+.copyright{ color: $color-blue; }
+
+@media screen and (min-width: rem(768)){
+	.pg-footer{ text-align:left; } 
+	.footer-nav{
+		float: right;
+		&__item{ float: left; }
+	}
+}

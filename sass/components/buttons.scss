@@ -1,0 +1,21 @@
+button,
+.button{
+	display: inline-block;
+	padding: 0.3em 3em;
+	border: none;
+	border-radius: 0;
+	text-shadow: none;
+	font-weight: bold;
+	text-align: center;
+	background-color: $color-blue;
+	text-decoration: none;
+
+	&,&:visited{ color: #FFF; }
+
+	&--cta,
+	&--submit{
+		background-color: $color-purple;
+		font-size: rem(18);
+	}
+
+}
