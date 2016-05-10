@@ -1,4 +1,4 @@
-# Ally-Code-Challenge- Chris Vere
+# Ally Code Challenge: Chris Vere
 
 Hello! Thank you for taking the time to review my challenge. Here are a couple notes regarding my work on the challenge.
 
@@ -10,7 +10,7 @@ I do know how to use jQuery quite well, I began using it about 6 years ago. Howe
 
 I used no plugins on this project, but I did conditionally load a couple polyfills to ensure IE9 could use things like element.classList amd element.dataset. jQuery would have silimilar 'polyfills' built into its core, so I felt no harm done.
 
-I used CSS3 transitions for the off-canvas navigation for small screens. I am aware this does not work in IE9, but I feel that should be OK since no devices are running IE9.
+I used CSS3 transitions for the off-canvas navigation for small screens. I am aware this does not work in IE9, but I feel this is OK since no devices are running IE9.
 
 I tested the site in the following browsers:
 
