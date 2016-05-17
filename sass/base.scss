@@ -14,8 +14,15 @@ body{
 	font-size: rem(14);
 }
 
-a{ color: $color-blue; }
-a:visited{ color: $color-blue-darker; }
+a{
+	color: $color-blue;
+	&:visited{ color: $color-blue-darker; }
+
+	&.a-no-style{
+		text-decoration: none;
+		color: inherit;
+	}
+}
 
 p{
 	margin: 0 0 1em;
